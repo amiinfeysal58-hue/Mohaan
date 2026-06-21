@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* Koontaynerka weyn ee cagaarka ah */
+        .main-container {
+            border: 10px solid green;
+            padding: 15px;
+            width: 850px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Qaybta sare (Header) */
+        .header {
+            background-color: #a9d1f5;
+            border: 4px solid yellow;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Qaybta dhexda ah ee ka kooban 3-da tiir */
+        .content-wrapper {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* Tiirka Bidix (Navigation) */
+        .sidebar {
+            border: 2px solid #333;
+            width: 15%;
+            padding: 10px;
+            min-height: 350px;
+        }
+        .sidebar a {
+            color: blue;
+            text-decoration: underline;
+            font-size: 20px;
+            margin-right: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Tiirka Dhexda (Main Content) */
+        .main-content {
+            border: 3px solid darkblue;
+            width: 50%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .image-text-wrap {
+            overflow: hidden;
+            font-size: 18px;
+            line-height: 1.3;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .flag-img {
+            float: left;
+            width: 230px;
+            height: 150px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            background-color: #4aa1f3;
+            position: relative;
+        }
+        /* Sameynta xiddigta dhexda ku jirta calanka iyadoo la isticmaalayo CSS */
+        .flag-img::before {
+            content: "★";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 70px;
+        }
+
+        /* Tiirka Midig (Table) */
+        .table-container {
+            width: 35%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid #5c2c16; /* Midabka snaxda ah ee xadka shaxda */
+        }
+        th, td {
+            border: 1px solid #777;
+            padding: 6px;
+            text-align: left;
+            vertical-align: top;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+        }
+        th {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* Qaybta hoose (Footer) */
+        .footer {
+            border: 4px solid orange;
+            text-align: center;
+            padding: 25px;
+            font-size: 18px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="header">
+            <h1>Example two layout</h1>
+        </div>
+
+        <div class="content-wrapper">
+            
+            <div class="sidebar">
+                <a href="#">home</a><a href="#">about</a>
+            </div>
+
+            <div class="main-content">
+                <div class="image-text-wrap">
+                    <div class="flag-img"></div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fugit blanditiis sequi ipsa ad amet. Est eligendi libero cupiditate voluptatem numquam laboriosam
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>ST ID</th>
+                        <th>ST Tel</th>
+                        <th>ST Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>612111111</td>
+                        <td>ahmed farhan mohamed</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>617152312</td>
+                        <td>Ahmed afrax qaasim</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>617146164</td>
+                        <td>liban mursal abdow</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>611161775</td>
+                        <td>mohamed faysal</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            © moha
+        </div>
+
+    </div>
+
+</body>
+</html>
