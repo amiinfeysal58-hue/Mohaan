@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Two Layout - Responsive</title>
+    <style>
+        /* Guud ahaan habaynta bogga - Waxaan ka saarnay dhibaatadii scroll-ka */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Shaxda weyn ee buraashka cagaaran */
+        .main-container {
+            background-color: #fff;
+            border: 5px solid yellow; 
+            padding: 8px;
+            width: 100%; /* Wuxuu qaadanayaa kaliya inta shaashada moobilka ah */
+            box-sizing: border-box;
+        }
+
+        /* Qaybta Sare ee Ciwaanka (Header) */
+        .header-section {
+            background-color: #a9d1f5; 
+            border: 3px solid brown; 
+            text-align: center;
+            padding: 10px 5px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+        }
+
+        .header-section h1 {
+            margin: 0;
+            font-size: 22px; /* Wax yar waa la dhimay si uu moobilka ugu soo baxo hal xariiq */
+            color: #000000;
+            font-weight: bold;
+        }
+
+        /* Qaybta dhexda ah (Saddexda tiir oo isku garab taagan) */
+        .middle-section {
+            display: flex;
+            margin-bottom: 8px;
+            gap: 2px; 
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Tiirka 1aad: Menu-ka bidix (Sidebar) */
+        .sidebar {
+            border: 1px solid #000000; 
+            padding: 5px;
+            width: 18%; /* Boqolley flexible ah */
+            box-sizing: border-box;
+            word-break: break-all;
+        }
+
+        .sidebar a {
+            color: #0000ff;
+            text-decoration: underline;
+            font-size: 11px;
+            display: inline-block;
+            margin-right: 3px;
+        }
+
+        /* Tiirka 2aad: Sanduuqa dhexda (Main Content) */
+        .content-box {
+            border: 1px solid #000000; 
+            padding: 5px;
+            width: 44%; /* Waa la isku dheelli tiray si shaxdu boos u hesho */
+            box-sizing: border-box;
+        }
+
+        /* Qaybta calanka iyo qoraalka */
+        .flag-and-text {
+            display: flex;
+            gap: 5px;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        /* Habaynta Calanka Soomaaliya - Loo sameeyay boqolley si uu ula kobo shaashadda */
+        .somali-flag {
+            width: 45%; 
+            aspect-ratio: 3 / 2; /* Wuxux ilaalinayaa qaabka calanka asaga oo iska dhimaya ballaca */
+            background-color: #87cefa; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .somali-flag .star {
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        /* Qoraalka lorem ipsum */
+        .text-container {
+            font-size: 9px; /* Wax yar waa la yaraynayaa si uu booska u ku filnaado */
+            line-height: 1.2;
+            color: #000;
+            text-align: left;
+        }
+
+        /* Tiirka 3aad: Shaxda midig (Table) */
+        .table-container {
+            width: 38%;
+            box-sizing: border-box;
+            border: 1px solid #000000; 
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #808080; 
+            padding: 3px 2px;
+            font-size: 8px; /* Cabirkaan wuxuu saacidayaa in magacyadu ku dhex jiraan shaxda */
+            color: #000000;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        /* Qaybta Hoose (Footer) */
+        .footer-section {
+            border: 3px solid brown; 
+            text-align: center;
+            padding: 8px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #000;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="header-section">
+            <h1>Example two layout</h1>
+        </div>
+
+        <div class="middle-section">
+            
+            <div class="sidebar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+            </div>
+
+            <div class="content-box">
+                <div class="flag-and-text">
+                    <div class="somali-flag">
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="text-container">
+                        Lorem ipsum dolor sit amet consectetur.
+                    </div>
+                </div>
+                <div class="text-container">
+                    eligendi libero cupiditate voluptatem numquam laboriosam.
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ST ID</th>
+                            <th>ST Tel</th>
+                            <th>ST Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>611161775</td>
+                            <td>mohamed feysal</td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>614675432</td>
+                            <td>ahmed cumar</td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>618907654</td>
+                            <td>anwwar xafid</td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>613789065</td>
+                            <td>liipan mursal</td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="footer-section">
+            &copy; MOHA
+        </div>
+        
+    </div>
+
+</body>
+</html>
